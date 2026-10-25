@@ -1,0 +1,39 @@
+// F:\GoProjects\GitHubAcct\X01-SandBox\.kilo\kilo.jsonc
+{
+  "$schema": "https://app.kilo.ai/config.json",
+
+  // 1. Map the external directory as a named reference in the architecture
+  "references": {
+    "go_knowledge": {
+      "path": "F:/Go_Knowledge",
+      "description": "Central Go documentation and release specifications",
+      "hidden": false
+    }
+  },
+
+  // 2. Direct the indexer to crawl the newly registered reference path
+  "instructions": [
+    "F:/Go_Knowledge/language-spec.md/**/*.md",
+    "F:/Go_Knowledge/releases/**/*.md"
+  ],
+
+  "permission": {
+    "read": {
+      "*": "allow",
+      "F:\\Go_Knowledge\\**": "allow", // Authorizes background tool access
+      "*.env": "ask",
+      "*.env.*": "ask",
+      "*.env.example": "allow",
+      "*.idea": "deny",
+      "*.idea.*": "deny"
+    },
+    "edit": "allow",
+    "bash": {
+      "*": "ask",
+      "cd *": "allow",
+      "grep *": "allow",
+      "git status *": "allow",
+      "git diff *": "allow"
+    }
+  }
+}
