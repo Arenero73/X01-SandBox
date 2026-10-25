@@ -17,6 +17,19 @@
     "F:/Go_Knowledge/releases/**/*.md"
   ],
 
+  // ---- AGENT CONFIGURATION BLOCK ----
+  "agent": {
+    // Regulate the primary chat agent coding behavior
+    "build": {
+      "temperature": 0.2, // Lower temperature makes code generation stable and precise
+      "top_p": 0.95
+    },
+    // Regulate the direct questioning agent behavior
+    "ask": {
+      "temperature": 0.1 // Extremely low temperature for strict factual lookups/quotes
+    }
+  },
+
   "permission": {
     "read": {
       "*": "allow",
