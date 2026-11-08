@@ -38,7 +38,9 @@
       "*.env.*": "ask",
       "*.env.example": "allow",
       "*.idea": "deny",
-      "*.idea.*": "deny"
+      "*.idea.*": "deny",
+      "cd *": "allow",
+      "grep *": "allow"
     },
     "edit": "allow",
     "bash": {
