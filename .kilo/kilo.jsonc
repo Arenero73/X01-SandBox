@@ -18,6 +18,8 @@
   ],
 
   // 3. Enable semantic indexer for the current project workspace
+  // Ignore IDE warning/error. $schema is out of date and waiting to
+  //   be updated.
   "indexing": {
     "enabled": true
   },
@@ -25,10 +27,15 @@
   "agent": {
     "build": {
       "temperature": 0.2,
-      "top_p": 0.95
+      "top_p": 0.90,
+      "repeat_penalty": 1.15,
+      "repeat_last_n": 64
     },
     "ask": {
-      "temperature": 0.1
+      "temperature": 0.1,
+      "top_p": 0.50,
+      "repeat_penalty": 1.15,
+      "repeat_last_n": 64
     }
   },
 
