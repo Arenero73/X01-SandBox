@@ -1,3 +1,5 @@
 module sqrRoot01
 
-go 1.27
+go 1.27.3
+
+require github.com/MikeAustin71/errpref/v2 v2.0.1 // indirect
